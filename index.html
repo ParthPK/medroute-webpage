@@ -186,27 +186,42 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Results</h2>
-        <div class="publication-video" style="padding-bottom: 20.25%;">
-          <img src="static/images/res_cg.jpg" />
+        <h3 class="title is-3">Qualitative Example</h3>
+        <div class="publication-video">
+          <img src="static/images/MedAgent_Qual.jpg" />
         </div>
         <div class="content has-text-justified">
           <p>
-            The first table shows the impact of our 2 proposed modules. Addition of Self-Cross Attention module certainly helps the model to 
-            train better and gives better validation performance. We also showcase our results on two variations of scene labels, one 
-            obtained by majority voting and other with soft labels. Comparing their performance, we see that soft labels are more helpful in 
-            model training. Table also shows that incorporation of the TextLabel Alignment strategy enhances the features of the model, thus 
-            giving a better performance. We showcase our results on two variations, text embeddings from city labels, and from mean of 
-            features from all hierarchy labels. Comparing their performance, we see that using all hierarchies helps the model train better 
-            as hypothesized.
-          </p>  
+            The input image shows axial CT scans of the heart and an ECG, which the question asks about. Out of the variety of specialists 
+            in the pool, the GP agent first selects a Cardiologist, which analyzes the ECG to give its diagnosis. Based on this diagnosis 
+            the GP consults a Thoracic Surgeon that gives a diagnosis consistent with the previous agent. Finally the GP routes to a 
+            Hematologist agent which also gives its own diagnosis. All 3 diagnoses are passed on to the Moderator agent that understands and 
+            summarizes them to give a final diagnosis “Prominent enlargement of the right atrium and right ventricle”.
+          </p>
+          <h3 class="title is-3">Quantitative Results</h3>
+        </div>
+        <div class="publication-video" style="padding-bottom: 20.25%;">
+          <img src="static/images/MedAgent_result_comb.jpg" />
+        </div>
           <p>
-            As no worldwide video geolocalization methods exist, we compare our model to the baselines with TimesFormer and VideoMAE 
-            encoders, along with the relevant state-of-the-art image geolocalization methods. For image models, we use a random frame from 
-            the video for geolocalization. Hierarchy classifiers are included for all models, and everything else is kept the same. The next
-            table shows the results of our model on our dataset. Our model is able to achieve a 69.6% top1 accuracy on City prediction, i.e.,
-            the most fine-grained hierarchy. Our model showcases an improvement of ∼ 6% highlighting the significance of our modules. Our 
-            model also shows an improvement in the coarser hierarchies with an ∼ 6% jump in state/province prediction, an ∼ 5% improvement 
-            in country and a ∼ 4% in continent prediction.
+            Our model can perform diagnosis on text-based and image-based medical questions. We show our model’s performance compared to 
+            other Large Language/Multimodal Models and Multimodal agentic framework on 2 text-only datasets and 3 image-text datasets.
+          </p>
+          <p>
+            Table on the left shows results on text-only datasets (MedQA and PubMedQA). Both datasets are similarly sized at 1273 samples 
+            and 1000 samples respectively. Our model outperforms the state-of-the-art model on both datasets by ∼ 6% and ∼ 2% respectively. 
+            Out of the baselines GPT-4.1-mini performs the best with 85.86% accurate answers on MedQA, while MAM performs the best on 
+            PubMedQA. In general the medical models fare much better than general purpose LLMs (with the exception of GPT) which is the 
+            expected trend.
+          </p>
+          <p>
+            We also evaluate on image-text multimodal medical datasets (PMC-VQA, DeepLesion and PathVQA) as seen in the right table. All 
+            image-text datasets are larger than their text-only counterparts. Out of the 3, PMC-VQA is the most similar in size with 2000 
+            samples, while DeepLesion and PathVQA are much larger with 4927 samples and 6719 samples respectively. Also PMC-VQA consists of 
+            general medical questions, DeepLesion has QA pairs constructed from coarse lesion class labels, and PathVQA consists of open-ended 
+            questions. We observe that our model again shows substantial improvement on all 3 datasets over state-of-the-art agentic 
+            framework, especially in DeepLesion (∼ 5.5%). We observe a mixed trend in vision models where Medical VLMs for some datasets 
+            perform better than general purpose VLMs, while performing worse for others.
           </p>
         </div>
       </div>
