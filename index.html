@@ -123,47 +123,35 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <div class="publication-video" style="padding-bottom: 31.25%;">
-          <img src="static/images/cityguessr_v_msls.png" />
+          <img src="static/images/MedAgent_Teaser.jpg" />
         </div>
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Video geolocalization is a crucial problem in current times.  Given just a video, ascertaining where it was captured  
-            from can have a plethora of advantages. The problem of worldwide geolocalization has been tackled before, but only 
-            using the image modality. 
+            Medical diagnosis using Large Multimodal Models (LMMs) has gained increasing attention due to capability of these models in 
+            providing precise diagnoses. These models generally combine medical questions with visual inputs to generate diagnoses or 
+            treatments. However, they are often overly general and unsuitable under the wide range of medical conditions in real-world 
+            healthcare. In clinical practice, diagnosis is performed by multiple specialists, each contributing domain-specific expertise. 
+            To emulate this process, a potential solution is to deploy a dynamic multi-agent LMM framework, where each agent functions as a 
+            medical specialist. Current approaches in this emerging area, typically relying on static or predefined selection of various 
+            specialists, cannot be adapted to the changing practical scenario. In this paper, we propose MedRoute, a flexible and dynamic 
+            multi-agent framework that comprises of a collaborative system of specialist LMM agents. Furthermore, we add a General 
+            Practitioner with an RL-trained router for dynamic specialist selection, and a Moderator that produces the final decision. In 
+            this way, our framework closely mirrors real clinical workflows. Extensive evaluations on text and image-based medical datasets 
+            demonstrate improved diagnostic accuracy, outperforming the state-of-the-art baselines. Our work lays a strong foundation for 
+            future research.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
-    <!-- Dataset. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">CityGuessr68k Dataset</h2>
-        <div class="publication-video" style="padding-bottom: 31.25%;">
-          <img src="static/images/cityguessr_v_msls.png" />
-        </div>
-        <div class="content has-text-justified">
-          <p>
-            The CityGuessr68k dataset consists of 68,269 first-person driving and walking videos from 166 cities, 157 states/provinces, 91 
-            countries and 6 continents. Each video is annotated with hierarchical location labels in the form of its continent, country, 
-            state/province, city. As we see in the figure below, CityGuessr68k has a good geographical coverage. Along with that, frequency 
-            distribution among classes is also relatively even. Each video is divided into frames of resolution 1280x720, which is higher 
-            than the only other worldwide image sequence dataset, Mapillary(MSLS) and all videos are approximately same in length. Our 
-            dataset is approximately 5x larger than Mapillary(MSLS) and spread across more cities around the world.
-          </p>  
-        </div>
-      </div>
-    </div>
-    <!--/ Dataset. -->
-
     <!-- Method. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Method Overview</h2>
         <div class="publication-video">
-          <img src="static/images/Method_page-0001.jpg" />
+          <img src="static/images/MedAgent_Overall.jpg" />
         </div>
         <div class="content has-text-justified">
           <p>
