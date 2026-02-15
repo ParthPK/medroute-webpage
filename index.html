@@ -187,7 +187,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Results</h2>
         <h3 class="title is-3">Qualitative Example</h3>
-        <div class="publication-video">
+        <div class="publication-video publication-video--portrait">
           <img src="static/images/MedAgent_Qual.jpg" />
         </div>
         <div class="content has-text-justified">
@@ -198,24 +198,39 @@
             Hematologist agent which also gives its own diagnosis. All 3 diagnoses are passed on to the Moderator agent that understands and 
             summarizes them to give a final diagnosis “Prominent enlargement of the right atrium and right ventricle”.
           </p>
-          <h3 class="title is-3">Quantitative Results</h3>
         </div>
+      </div>
+    </div>
+    <!--/ Dataset. -->
+  </div>
+
+    <!-- Dataset. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Quantitative Results</h2>
         <div class="publication-video" style="padding-bottom: 20.25%;">
           <img src="static/images/MedAgent_result_comb.jpg" />
         </div>
+        <div class="content has-text-justified">
           <p>
             Our model can perform diagnosis on text-based and image-based medical questions. We show our model’s performance compared to 
             other Large Language/Multimodal Models and Multimodal agentic framework on 2 text-only datasets and 3 image-text datasets.
           </p>
+          <div class="publication-video" style="padding-bottom: 20.25%;">
+            <img src="static/images/MedAgent_result_txtonly.jpg" />
+          </div>
           <p>
-            Table on the left shows results on text-only datasets (MedQA and PubMedQA). Both datasets are similarly sized at 1273 samples 
+            Table shows results on text-only datasets (MedQA and PubMedQA). Both datasets are similarly sized at 1273 samples 
             and 1000 samples respectively. Our model outperforms the state-of-the-art model on both datasets by ∼ 6% and ∼ 2% respectively. 
             Out of the baselines GPT-4.1-mini performs the best with 85.86% accurate answers on MedQA, while MAM performs the best on 
             PubMedQA. In general the medical models fare much better than general purpose LLMs (with the exception of GPT) which is the 
             expected trend.
           </p>
+          <div class="publication-video" style="padding-bottom: 20.25%;">
+            <img src="static/images/MedAgent_result_imgtxt.jpg" />
+          </div>
           <p>
-            We also evaluate on image-text multimodal medical datasets (PMC-VQA, DeepLesion and PathVQA) as seen in the right table. All 
+            We also evaluate on image-text multimodal medical datasets (PMC-VQA, DeepLesion and PathVQA) as seen in the table. All 
             image-text datasets are larger than their text-only counterparts. Out of the 3, PMC-VQA is the most similar in size with 2000 
             samples, while DeepLesion and PathVQA are much larger with 4927 samples and 6719 samples respectively. Also PMC-VQA consists of 
             general medical questions, DeepLesion has QA pairs constructed from coarse lesion class labels, and PathVQA consists of open-ended 
@@ -228,6 +243,9 @@
     </div>
     <!--/ Dataset. -->
   </div>
+
+
+  
 </section>
 <!--
 <section class="section">
